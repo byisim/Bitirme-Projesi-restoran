@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*
+
+/*Navbar başla*/
+{
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+nav
+{
+    background: #515151;
+    height: 80px;
+    z-index: 3;
+    width: 100%;
+    position: fixed;
+
+}
+label.logo
+{
+    color: #fff;
+    font-size: 2.2em;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: 800;
+}
+
+nav ul
+{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li
+{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a
+{
+    color: #fff;
+    font-size: 1.1em;
+    padding: 7px 12px;
+    text-transform: uppercase;
+}
+a.active, a:hover
+{
+    background: #32ccf2;
+    transition: 0.5s;
+}
+.checkbtn
+{
+    font-size: 2em;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check
+{
+    display: none;
+}
+@media (max-width: 991px)
+{
+    label.logo
+    {
+        font-size: 2em;
+        padding-left: 50px;
+    }
+    nav ul li a
+    {
+        font-size: 1em;
+    }
+}
+@media (max-width: 861px)
+{
+    .checkbtn
+    {
+        display: block;
+    }
+    ul
+    {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2b2e20;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    nav ul li
+    {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a
+    {
+        font-size: 1.2em;
+    }
+    a:hover,a.avtive
+    {
+        background: none;
+        color: #32ccf2;
+    }
+    #check:checked ~ ul
+    {
+        left: 0;
+    }
+}
+
+/*Navbar bitiş*/
+
+
+.anasyfa
+{
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url(görseller/hamburger-5630646_1920.jpg);
+    width: 100%;
+    height: 750px;
+    overflow: hidden;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.hakkmzda
+{
+    background-color: hsl(234, 6%, 33%);
+    width: 90%;
+    height: 300px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border: 2px solid black;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: #2b2e20 2px 2px 2px;
+}
+
+/*Links başla*/
+
+.ul
+{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    float: left;
+}
+.ul li
+{
+    position: relative;
+    display: block;
+    font-size: 2em;
+    height: 60px;
+    width: 60px;
+    background: #161515;
+    color: #666;
+    line-height: 60px;
+    border-radius: 50%;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+.ul li::before
+{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    background: #504f4e;
+    height: inherit;
+    width: inherit;
+    border-radius: 50%;
+    transform: scale(0.8);
+    z-index: -1;
+    transition: 0.5s;
+}
+.ul li:nth-child(1)::before
+{
+    background: #f01906;
+}
+.ul li:nth-child(2)::before
+{
+    background: #9705f8;
+}
+.ul li:nth-child(3)::before
+{
+    background: #8f8f8f;
+}
+.ul li:nth-child(4)::before
+{
+    background: #dc06f0;
+}
+.ul li:nth-child(5)::before
+{
+    background: #0998f6;
+}
+
+.ul li:hover::before
+{
+    filter: blur(3px);
+    transform: scale(1.2);
+}
+
+.ul li:nth-child(1):hover:before
+{
+    box-shadow: 0 0 15px #f01906;
+}
+.ul li:nth-child(2):hover:before
+{
+    box-shadow: 0 0 15px #9705f8;
+}
+.ul li:nth-child(3):hover:before
+{
+    box-shadow: 0 0 15px #8f8f8f;
+}
+.ul li:nth-child(4):hover:before
+{
+    box-shadow: 0 0 15px #dc06f0;
+}
+.ul li:nth-child(5):hover:before
+{
+    box-shadow: 0 0 15px #0998f6;
+}
+
+.ul li:nth-child(1):hover
+{
+    color: #ab4545;
+    box-shadow: 0 0 15px #f22f1d;
+    text-shadow: #f22f1d;
+}
+.ul li:nth-child(2):hover
+{
+    color: #9345ab;
+    box-shadow: 0 0 15px #c01df2;
+    text-shadow: #c01df2;
+}
+.ul li:nth-child(3):hover
+{
+    color: #958888;
+    box-shadow: 0 0 15px #f0d2d0;
+    text-shadow: #f0d2d0;
+}
+.ul li:nth-child(4):hover
+{
+    color: #a845ab;
+    box-shadow: 0 0 15px #f21de0;
+    text-shadow: #f21de0;
+}
+.ul li:nth-child(5):hover
+{
+    color: #45a8ab;
+    box-shadow: 0 0 15px #1d9df2;
+    text-shadow: #1d9df2;
+}
+
+/*Links bitiş*/
